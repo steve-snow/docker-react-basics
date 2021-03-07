@@ -1,0 +1,5 @@
+Docker*
+.docker*
+/.vscode
+/build
+/node_modules
