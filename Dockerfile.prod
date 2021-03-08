@@ -1,0 +1,12 @@
+FROM node:alpine as base
+WORKDIR /app
+
+FROM base as tester
+COPY package*.json ./
+RUN yarn install
+COPY . .
+
+FROM tester as production
+# COPY . .
+RUN yarn build
+CMD ["yarn", "start"]
