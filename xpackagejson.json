@@ -1,0 +1,129 @@
+{
+  "name": "outlayr.web.client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@aspnet/signalr": "^1.1.2", +
+    "@khanacademy/react-multi-select": "^0.3.3", --PaymentMethodsMultiSelect
+    "@microsoft/signalr": "^5.0.1", +
+    "antd": "^4.12.3",   +  LandingPage
+    "axios": "^0.21.1", +
+    "bootstrap": "^4.6.0", +    TODO XXX
+    "c3": "^0.6.12",  
+    "canvas-to-image": "^2.2.0",  QrCodeGenerator
+    "chart.js": "2.7.3",  ?
+    "chroma-js": "^2.0.2",
+    "classnames": "^2.2.6", skipping
+    "collect.js": "^4.28.6",
+    "concurrently": "^4.1.0", skipping
+    "debug": "^4.1.1",
+    "filerobot-image-editor": "^3.12.11",
+    "formik": "^1.5.0",
+    "history": "4.7.2", skipping
+    "html-to-image": "^1.3.21", QrCodeGenerator
+    "i18next": "^19.8.7",
+    "immutability-helper": "3.0.0", Container.jsx
+    "jquery": "^3.3.1",
+    "moment": "^2.29.1",
+    "namor": "^1.1.1",  skipping
+    "node-sass": "^5.0.0",  trying sass instead
+    "node-sass-chokidar": "^1.3.4",  skipping
+    "npm-run-all": "4.1.5", skipping
+    "plaid": "^2.10.0",
+    "popper.js": "^1.14.7",
+    "prop-types": "^15.7.2", TODO XXX
+    "puppeteer": "^7.1.0",    TODO XXX
+    "qrcode.react": "^1.0.1", QrCodeGenerator
+    "react": "^16.7.0",
+    "react-autosuggest": "^9.4.3",
+    "react-bootstrap-sweetalert": "^5.2.0",
+    "react-bootstrap-switch": "^15.5.3",
+    "react-bootstrap-table": "^4.3.1",
+    "react-bootstrap-wizard": "0.0.7",
+    "react-c3-component": "^1.4.0",
+    "react-c3js": "^0.1.20",
+    "react-chartjs-2": "^2.7.4",
+    "react-content-loader": "^6.0.1",
+    "react-datepicker": "^3.4.1",
+    "react-dates": "^19.0.4",
+    "react-datetime": "^2.15.0",
+    "react-dnd": "^11.1.3",
+    "react-dnd-html5-backend": "^11.1.3",
+    "react-dom": "^16.8.3",
+    "react-dropdown": "^1.9.2",
+    "react-facebook-login": "^4.1.1",
+    "react-google-button": "^0.5.3",
+    "react-google-login": "^5.0.2", LoginWithGoogle
+    "react-i18next": "^11.8.6",done
+    "react-iframe": "1.3.3", skipping
+    "react-image-crop": "^6.0.13", FileCropUpload
+    "react-image-lightbox": "^5.1.0", ProductEditImages
+    "react-jvectormap": "0.0.6", skipping
+    "react-perfect-scrollbar": "1.4.4", sidebar.jsx
+    "react-plaid-link": "^1.1.0",PlaidLinkComponent
+    "react-rating": "^1.6.2",MerchantProductDashboard
+    "react-redux": "^6.0.1",skipping
+    "react-reveal": "^1.2.2",done
+    "react-router-dom": "^4.3.1",done
+    "react-sane-contenteditable": "^1.5.0",skipping
+    "react-scripts": "^2.1.3",done
+    "react-select": "^2.0.0",done
+    "react-smooth-dnd": "^0.11.1",skipping
+    "react-social-login-buttons": "^2.3.0",skipping
+    "react-sparklines": "^1.7.0",skipping
+    "react-step-wizard": "^5.0.0",  CreateProductMerchantAll
+    "react-stepzilla": "^5.0.0",  skipping
+    "react-table": "^6.8.6",  skipping
+    "react-tagsinput": "^3.19.0", MetaTags...
+    "react-text-mask": "^5.4.3",  ProfileForm.jsx
+    "react-toastify": "^4.5.2",   App.jsx
+    "react-tooltip": "^4.2.13",done
+    "react-transition-group": "^4.4.1", Header.jsx
+    "react-validation": "^3.0.7",done
+    "react-validation-mixin": "^5.4.0",done
+    "react-with-direction": "^1.3.0", skipping
+    "reactstrap": "7.1.0",done
+    "recompose": "^0.30.0",     skipping
+    "redux": "^4.0.1",          skipping
+    "redux-logger": "^3.0.6",   skipping
+    "redux-promise-middleware": "^6.1.0", skipping
+    "redux-thunk": "^2.3.0",    skipping
+    "request": "^2.88.2",         skipping
+    "save-svg-as-png": "^1.4.17",   skipping
+    "sweetalert2-react": "^0.8.3",  skipping
+    "terser": "^5.5.1",           skpping
+    "universal-cookie": "^3.0.7", skipping
+    "validator": "^10.8.0",   skipping
+    "yarn": "^1.13.0",        skipping
+    "yup": "^0.26.10"  done
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "css-build": "concurrently \"npm:build-cs\" \"npm:watch-css\"",
+    "build": "yarn run build-css && react-scripts build",
+    "lint": "eslint ./src"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "resolutions": {
+    "terser": "3.14.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-react-jsx-source": "^7.12.13",
+    "babel-eslint": "9.0.0",
+    "cypress": "^6.5.0",
+    "cypress-file-upload": "^5.0.2",
+    "eslint": "5.12.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4"
+  }
+}
